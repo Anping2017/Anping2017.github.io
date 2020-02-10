@@ -1,85 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyCheatSheet</title>
+    <link rel="stylesheet" href="normalize.css">
     <style>
-        * {
-            /* border:1px solid black; */
-            margin:0px;
-            padding:0px;
-        }
+        /* reset */
+        /* * {
+            border: 1px solid black;
+            margin: 0px;
+            padding: 0px;
+        } */
+
+
+
+
+
+        /* header start */
         header {
             background-color: #33ddff;
-            overflow:hidden;
-        }
-        nav h2 {
-            display:inline-block;
+            overflow: hidden;
+    
         }
 
-        nav ul{
 
-            display:inline-block;
-            margin-left: 40px;
-   
-   
-
-        }
-  
-        nav ul li{
+        header ul {
             list-style: none;
-            display:inline-block;       
-            padding:10px;
- 
-
         }
-        nav ul li a {
-            color:#000;
+
+        header a {
             text-decoration: none;
-        }
-        nav ul li a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .container{
-            margin:0 auto;
-            width:80%;
-            padding-top:20px;
-        }
-        .container ul {
-            margin-top:5px;
-        }
-        
-        .container ul li {
-            padding:2px;
+            color: #000;
         }
 
+        header a:hover {
+            color: #fff;
+
+        }
+
+        header ul li {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* 3 block float */
+        .left-nav {
+            float: left;
+            padding:10px;
+        }
+
+        header nav {
+            float: left;
+
+        }
+
+        .right-nav {
+            float: right;
+        }
+
+
+        /* left-nav */
+        .my-header {
+            font-size: 30px;
+        }
+
+        /* center nav */
+        .center ul {
+            float: left;
+            margin-left: 20px;
+        }
+
+
+        .center ul li {
+            float: left;
+        }
+
+
+
+
+
+        /* right-nav */
+        .right-nav {
+            float: right;
+        }
+
+        .right-nav li {
+            float: left;
+
+        }
+
+
+        /* header end */
+
+
+
+        /* center */
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            padding-top: 20px;
+        }
+
+        .container ul {
+            margin-top: 5px;
+            list-style:disc;
+
+        }
+
+        .container ul li {
+            padding: 10px;
+        }
+
+        .container h2 {
+            font-size:30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
+        <!-- header start -->
         <header>
-            <nav>
-                
-                <h2>My Cheat Sheet</h2>
+            <!-- left-nav -->
+            <div class="left-nav">
+                <span class="my-header">My Cheat Sheet</span>
+            </div>
+
+            <!-- center nav -->
+            <div class="center">
                 <ul>
                     <li><a href="pages/manual.html">手册</a></li>
                     <li><a href="./pages/myTool.html">工具</a></li>
-
                 </ul>
-            </nav>
+            </div>
+
+            <!-- right-nav -->
+            <ul class="right-nav">
+                <li><a href="https://github.com/Anping2017/Anping2017.github.io">My Github</a></li>
+                <li><a href="">有道云</a></li>
+            </ul>
+
         </header>
 
+
         <div class="container">
-        <h2>我的学习</h2>
+            <h2>我的学习</h2>
             <ul>
-                <li><a href="https://github.com/Anping2017/test/blob/master/HTML/html.md">HTML</a></li>
-                <li><a href="https://github.com/Anping2017/test/blob/master/CSS/css.md">CSS</a></li>
-                <li><a href="https://github.com/Anping2017/test/blob/master/JS/js.md">JS</a></li>
-                <li><a href="BOM/BOM.html">BOM</a></li>
+                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/HTML/html.md">HTML</a></li>
+                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/CSS/css.md">CSS</a></li>
+                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/JS/js.md">JS</a></li>
+                <ul>
+                    <li><a href="BOM/BOM.html">BOM</a></li>
+                </ul>
             </ul>
         </div>
     </div>
 </body>
+
 </html>
