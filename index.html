@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyCheatSheet</title>
-    <link rel="stylesheet" href="reset.css">
     <style>
         /* reset */
-        /* * {
-            border: 1px solid black;
+        * {
+            /* border: 1px solid black; */
             margin: 0px;
             padding: 0px;
-        } */
+        }
 
 
 
@@ -25,9 +24,9 @@
     
         }
 
-
-        header nav ul {
-            list-style: none;
+        .center ul,
+        .right-nav{
+            list-style:none;
         }
 
         header a {
@@ -90,7 +89,6 @@
 
         .right-nav li {
             float: left;
-
         }
 
 
@@ -98,27 +96,37 @@
 
 
 
+
+
         /* center */
         .container {
             margin: 0 auto;
             width: 80%;
-            padding-top: 20px;
+            padding: 20px;
+            background-color: #eee;
         }
 
         .container ul {
-            margin-top: 5px;
-            list-style:disc;
-
+            font-weight: bold;
         }
 
         .container ul li {
-            padding: 10px;
+            padding: 5px;
         }
 
         .container h2 {
             font-size:30px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: bold;
+        }
+
+        .container ul ul {
+            margin-left: 25px;
+ 
+        }
+
+        .study>ul {
+            margin-top:20px;
         }
     </style>
 </head>
@@ -137,6 +145,7 @@
                 <ul>
                     <li><a href="pages/manual.html">手册</a></li>
                     <li><a href="./pages/myTool.html">工具</a></li>
+                    <li><a href="pages/review.html">复习</a></li>
                 </ul>
             </div>
 
@@ -150,15 +159,22 @@
 
 
         <div class="container">
+            <div class="study">
             <h2>我的学习</h2>
             <ul>
-                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/HTML/html.md">HTML</a></li>
-                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/CSS/css.md">CSS</a></li>
-                <li><a href="https://github.com/Anping2017/Anping2017.github.io/blob/master/JS/js.md">JS</a></li>
+
+                <li><a href="HTML/html.html">HTML</a></li>
+                <li><a href="CSS/css.html">CSS</a></li>
+                <ul>
+                    <li><a href="https://sass.bootcss.com/documentation">Sass</a></li>
+                </ul>
+                <li><a href="JS/js.html">JS</a></li>
                 <ul>
                     <li><a href="BOM/BOM.html">BOM</a></li>
+                    <li><a href="DOM/DOM.html">DOM</a></li>
                 </ul>
             </ul>
+             </div>
         </div>
     </div>
 </body>
