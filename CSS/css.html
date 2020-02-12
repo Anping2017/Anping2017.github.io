@@ -1,4 +1,104 @@
-<h1>CSS学习</h1>
-<ul>
-    <li><a href="https://www.haorooms.com/tools/css_selecter/">选择器演示</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Study</title>
+    <style>
+        .option {
+            position: relative;
+        }
+
+        .info {
+
+            position: absolute;
+            left: 60px;
+            top: -5px;
+            display: none;
+            background-color: silver;
+            padding: 5px 10px 5px 0px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS学习</h1>
+    <ul>
+        <li>
+            <div class="option"><a href="https://www.w3school.com.cn/cssref/css_selectors.asp">选择器</a>
+                <div class="info">
+                    <ul>
+                        <li>通配符*</li>
+                        <li>元素选择器(E)</li>
+                        <li>包含选择器(E F) -- 选择所有被E元素包含的F元素</li>
+                        <li>子代选择器(E>F) -- 选择所有作为E元素的子元素F</li>
+                        <li>相邻选择器(E+F) -- 选择紧贴在E元素之后F元素，元素E与F必须同属一个父级。</li>
+                        <li>兄弟选择器(E~F) -- 选择E元素后面的所有兄弟元素F，元素E与F必须同属一个父级。</li>
+                        <a href="https://www.w3schools.com/cssref/trysel.asp">其他演示</a>
+                        <div class="option">
+                            <li><strong>伪类</strong></li>
+                            <div class="info">
+
+                                <span><a
+                                        href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">MDN</a></span>
+                                /
+                                <span><a href="https://www.runoob.com/css/css-pseudo-classes.html">菜鸟</a></span>
+
+                            </div>
+                        </div>
+                        <div class="option">
+                            <li><strong>伪元素</strong></li>
+                            <div class="info">
+
+                                <span><a
+                                        href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">MDN</a></span>
+                                /
+                                <span><a href="https://www.runoob.com/css/css-pseudo-elements.html">菜鸟</a></span>
+
+                            </div>
+                        </div>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="option"><a href="">优先级</a>
+                <div class="info">
+                    <ul>
+                        <li><a href="https://cssspecificity.com/">权重图示</a></li>
+                        <li><a href="https://specificity.keegan.st/">权重计算器</a></li>
+                        <li><a href="https://zhuanlan.zhihu.com/p/41604775">教程</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        var arr = document.getElementsByClassName('option')
+        var info = document.getElementsByClassName('info')
+        for (let i = 0; i < arr.length; i++) {
+
+            arr[i].onmouseover = () => {
+                info[i].style.display = "block"
+            };
+
+            arr[i].onmouseout = () => {
+                info[i].style.display = "none";
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

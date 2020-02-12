@@ -4,7 +4,7 @@
 
 
 
-### 1. 使用
+### 1. 引入
 
 * 在body中`<p style="color:red;marin:9px;">`
 
