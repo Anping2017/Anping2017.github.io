@@ -10,8 +10,14 @@
             position: relative;
         }
 
-        .info {
+        h1>ul>li.option {
+            border: 1px solid black;
+            display: inline-block;
+            position: relative;
+        }
 
+
+        .info {
             position: absolute;
             left: 60px;
             top: -5px;
@@ -20,7 +26,11 @@
             padding: 5px 10px 5px 0px;
             border-radius: 4px;
             font-size: 0.8rem;
+        }
 
+        a {
+            text-decoration: none;
+       
 
         }
     </style>
@@ -28,59 +38,71 @@
 
 <body>
     <h1>CSS学习</h1>
+    <h2>基本知识</h2>
     <ul>
         <li>
             <div class="option"><a href="https://www.w3school.com.cn/cssref/css_selectors.asp">选择器</a>
                 <div class="info">
                     <ul>
+                        <a href="https://www.w3schools.com/cssref/trysel.asp">演示</a>
                         <li>通配符*</li>
                         <li>元素选择器(E)</li>
                         <li>包含选择器(E F) -- 选择所有被E元素包含的F元素</li>
                         <li>子代选择器(E>F) -- 选择所有作为E元素的子元素F</li>
                         <li>相邻选择器(E+F) -- 选择紧贴在E元素之后F元素，元素E与F必须同属一个父级。</li>
                         <li>兄弟选择器(E~F) -- 选择E元素后面的所有兄弟元素F，元素E与F必须同属一个父级。</li>
-                        <a href="https://www.w3schools.com/cssref/trysel.asp">其他演示</a>
-                        <div class="option">
-                            <li><strong>伪类</strong></li>
-                            <div class="info">
 
-                                <span><a
-                                        href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">MDN</a></span>
-                                /
-                                <span><a href="https://www.runoob.com/css/css-pseudo-classes.html">菜鸟</a></span>
-
-                            </div>
-                        </div>
-                        <div class="option">
-                            <li><strong>伪元素</strong></li>
-                            <div class="info">
-
-                                <span><a
-                                        href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">MDN</a></span>
-                                /
-                                <span><a href="https://www.runoob.com/css/css-pseudo-elements.html">菜鸟</a></span>
-
-                            </div>
-                        </div>
-
-                        
                     </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="option">
+                <a>伪类</a>
+                <div class="info">
+
+                    <span><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">MDN</a></span>
+                    /
+                    <span><a href="https://www.runoob.com/css/css-pseudo-classes.html">菜鸟</a></span>
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="option">
+                <a>伪元素</a>
+                <div class="info">
+
+                    <span><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">MDN</a></span>
+                    /
+                    <span><a href="https://www.runoob.com/css/css-pseudo-elements.html">菜鸟</a></span>
+
                 </div>
             </div>
         </li>
         <li>
             <div class="option"><a href="">优先级</a>
                 <div class="info">
-                    <ul>
-                        <li><a href="https://cssspecificity.com/">权重图示</a></li>
-                        <li><a href="https://specificity.keegan.st/">权重计算器</a></li>
-                        <li><a href="https://zhuanlan.zhihu.com/p/41604775">教程</a></li>
-                    </ul>
+                    <span>
+                        <a href="https://cssspecificity.com/">权重图示</a> </span> / 
+                    <span><a href="https://specificity.keegan.st/">权重计算器</a> </span> /
+                    <span><a href="https://zhuanlan.zhihu.com/p/41604775">教程</a> </span>
                 </div>
             </div>
         </li>
+        <li>
+            <div class="option"><a href="pages/display.html">display元素类型</a></div>
+        </li>
     </ul>
 
+    <h2>网站组件</h2>
+    <ul>
+        <li class="option">二级导航栏
+        <div class="info">
+            <a href="pages/innernav.html">我的总结</a>
+        </div>
+    </li>
+    </ul>
     <script>
         var arr = document.getElementsByClassName('option')
         var info = document.getElementsByClassName('info')
