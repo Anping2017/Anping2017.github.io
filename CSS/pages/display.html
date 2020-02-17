@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>display</title>
     <link rel="stylesheet" href="../../main.css">
-    
+    <style>
+        pre {
+            margin-bottom: 30px;
+        }
+        .list {
+            margin:30px 0;
+            list-style:none;
+            text-decoration: none;
+            line-height:30px;
+        }
+    </style>
 </head>
+
 <body>
-    
-</body>
-</html>
 
 <div class="wrapper">
-<h1>元素类型</h1>
+    <h1>元素类型</h1>
+    <a href="../css.html">返回</a>
+    <ul class="list">
+        <li>
+            <a href="https://www.jianshu.com/p/50e6ef5112a6">块元素和内联元素表</a>
+        </li>
+        <li><a href="https://www.w3school.com.cn/cssref/pr_class_display.asp">display属性手册</a></li>
+    </ul>
 
-<p><a href="https://www.jianshu.com/p/50e6ef5112a6">块元素和内联元素表</a></p>
 
-
-<h2>display: block</h2>
-<p><img src="../images/display-block.PNG" alt=""></p>
-<pre>
+    <h2>display: block</h2>
+    <p><img src="../images/display-block.PNG" alt=""></p>
+    <pre>
 块级元素的特点：
 （1）独占一行
 （2）高度，宽度，行高、外边距以及内边距都可以控制。
 （3）宽度默认是容器的100%
 （4）可以容纳内联元素和其他块元素。
 </pre>
-<br>
-<h2>display: inline</h2>
-<p><img src="../images/display-inline.PNG" alt=""></p>
-<pre>
+    <br>
+    <h2>display: inline</h2>
+    <p><img src="../images/display-inline.PNG" alt=""></p>
+    <pre>
 行内元素的特点：
 （1）和相邻行内元素在一行上。
 （2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。
 （3）默认宽度就是它本身内容的宽度。
 （4）行内元素只能容纳文本或则其他行内元素。
 </pre>
-<br>
+    <br>
 
-<h2>display: inline-block</h2>
-<p><img src="../images/display-inline-block.PNG" alt=""></p>
-<pre>
+    <h2>display: inline-block</h2>
+    <p><img src="../images/display-inline-block.PNG" alt=""></p>
+    <pre>
 行内块元素的特点：
 （1）和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙。
 （2）默认宽度就是它本身内容的宽度。
@@ -52,3 +66,5 @@
 在行内元素中有几个特殊的标签——&ltimg />、&ltinput />、&lttd>，可以对它们设置宽高和对齐属性，有些资料可能会称它们为行内块元素。
 </pre>
 </div>
+</body>
+</html>
