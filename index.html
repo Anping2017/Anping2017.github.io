@@ -16,18 +16,22 @@
 
 
 
-
+        body {
+            font-size:20px;
+        }
 
         /* header start */
         header {
-            background-color:#1abc9c;
+            background-color: #1abc9c;
             overflow: hidden;
-    
-        }
 
+        }
+        a {
+            text-decoration: none;
+        }
         .center ul,
-        .right-nav{
-            list-style:none;
+        .right-nav {
+            list-style: none;
         }
 
         header a {
@@ -49,7 +53,7 @@
         /* 3 block float */
         .left-nav {
             float: left;
-            padding:10px;
+            padding: 10px;
         }
 
         header nav {
@@ -104,8 +108,8 @@
             margin: 0 auto;
             width: 80%;
             padding: 20px;
-        
-    
+
+
         }
 
         .container ul {
@@ -117,18 +121,23 @@
         }
 
         .container h2 {
-            font-size:30px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: bold;
         }
 
         .container ul ul {
             margin-left: 25px;
- 
+
         }
 
         .study>ul {
-            margin-top:20px;
+            margin-top: 20px;
+        }
+
+        .col {
+            float: left;
+            margin:0px 30px;
         }
     </style>
 </head>
@@ -163,21 +172,52 @@
 
         <div class="container">
             <div class="study">
-            <h2>我的学习</h2>
-            <ul>
+                <h2>我的学习</h2>
+                <ul class="col">
 
-                <li><a href="HTML/html.html">HTML</a></li>
-                <li><a href="CSS/css.html">CSS</a></li>
-                <ul>
-                    <li><a href="https://sass.bootcss.com/documentation">Sass</a></li>
+                    <li><a href="HTML/html.html">HTML</a></li>
+                    <ul>
+                    <li>BootStrap</li>
+                    </ul>
+                    <li><a href="CSS/css.html">CSS</a></li>
+                    <ul>
+                        <li><a href="pages/sass.html">Sass</a></li>
+                    </ul>
+                    <li><a href="JS/js.html">JS</a></li>
+                    <ul>
+                        <li><a href="JS/BOM/BOM.html">BOM</a></li>
+                        <li><a href="JS/DOM/DOM.html">DOM</a></li>
+             
+                    <li>JSON</li>
+                    <li>JQuery</li>
+                    <li>Node JS</li>
+                    <li>Vue</li>
                 </ul>
-                <li><a href="JS/js.html">JS</a></li>
-                <ul>
-                    <li><a href="BOM/BOM.html">BOM</a></li>
-                    <li><a href="DOM/DOM.html">DOM</a></li>
                 </ul>
-            </ul>
-             </div>
+
+                <ul class="col">
+                    <li>Markdown</li>
+                    <li>GIT</li>
+                    <li>Linux</li>
+                    <li>Webpack</li>
+                </ul>
+   
+                <ul class="col">
+                    <li>命名和书写规范</li>
+                    <li>SEO</li>
+                    <li>响应式布局</li>
+                    <li>数据结构</li>
+                    <li>算法</li>
+                    <li>性能优化</li>
+                    <li>浏览器</li>
+                    <li>HTTP</li>
+                    <li>安全</li>
+     
+
+                </ul>
+     
+
+            </div>
         </div>
     </div>
 </body>
