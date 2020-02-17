@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+    <link rel="stylesheet" href="../../src/prism.css">
+</head>
+<body>
+    <script src="../../src/prism.js"></script>
+    <h1>模板语法</h1>
+    <a href="#">插值数据</a>
+    <a href="#order">指令</a>
+    <h2>插值</h2>
+    <ul>
+        <li>文本</li>
+        <ul>
+            <li>{{msg}}--对接实例对象的属性值，双向绑定</li>
+            <pre>
+                <code class="language-js">
+                    <xmp>
+                        //html
+                        <div id="app">
+                            {{ data }}  //对接app中data的值
+                        </div>
+
+                        //js
+                        var app = new Vue({
+                            el:"app",
+                            data:{
+                                data: "这里的值对接{{data}}"
+                            }
+                        })
+                        
+                        app.data = "这个值双向绑定{{data}}"
+                    </xmp>
+                </code>
+            </pre>
+            <li>v-once--单次输出</li>
+            <pre>
+                <code class="language-js">
+                    <xmp>
+                        //在元素中使用v-once,数据改变时不会更新
+                        <p v-once>{{ data }}</p>
+                    </xmp>
+                </code>
+            </pre>
+        </ul>
+        <li>raw html--原始html输出</li>
+        <pre>
+            <code class="language-js">
+                <xmp>
+                    //为元素增加v-html="msg"属性
+                    <p v-html="data raw html"></p>
+                </xmp>
+            </code>
+        </pre>
+        <li>Attribute属性值的变更</li>
+        <ul>
+            <li>v-bind:attr</li>
+            <li>:attr</li>
+            <pre>
+                <code class="language-js">
+                    <xmp>
+                        //为元素增加v-bind:attr = "data" 
+                        <div v-bind:id = "data"></div>
+                        //简写
+                        <div :id = "data"></div>
+                    </xmp>
+                </code>
+            </pre>
+        </ul>
+    </ul>
+    <h2><a name="order">v-指令</a></h2>
+    <ul>
+        <li>v-text</li>
+        <li>v-html</li>
+        <li>v-show</li>
+        <li>v-if</li>
+        <li>v-else</li>
+        <li>v-else-if</li>
+        <li>v-for</li>
+        <li>v-on</li>
+        <li>v-bind</li>
+        <li>v-model</li>
+        <li>v-slot</li>
+        <li>v-pre</li>
+        <li>v-cloak</li>
+        <li>v-once</li>
+    </ul>
+    <ul>
+        <li>参数和动态参数：</li>
+        <ul>
+        <li>v-bind:attr|[data]</li>
+        <li>v-on:event|[data]</li>
+              
+    </ul>
+    <li>修饰符</li>
+    <ul>
+        <li>表单修饰符</li>
+        <li>事件修饰符</li>
+        <li>鼠标按键修饰符</li>
+        <li>键值修饰符</li>
+        <li>v-bind修饰符</li>
+    </ul>
+    
+        <li>常用修饰符的指令</li>
+    <ul>
+        <li>v-on修饰符</li>
+        <li>v-model修饰符</li>
+        <li>v-bind修饰符</li>
+    </ul>
+
+</body>
+</html>
