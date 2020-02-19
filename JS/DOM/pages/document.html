@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document对象</title>
+    <link rel="stylesheet" href="../../../main.css">
+
+</head>
+<body>
+    
+    <h2><a href="https://www.w3school.com.cn/jsref/dom_obj_document.asp">Document对象</a></h2>
+
+    <p>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。</p>
+  
+    <h2>集合[]</h2>
+    <ul id="collection">
+      <li>document.all</li>
+      <li>document.anchors</li>
+      <li>document.applets</li>
+      <li>document.forms</li>
+      <li>document.images</li>
+      <li>document.links</li>
+    </ul>
+
+     <h2>属性：</h2>
+
+     <ul id="prop">
+         <li>document.body</li>
+         <li>document.cookie</li>
+         <li>document.domain</li>
+         <li>document.lastModified</li>
+         <li>document.referrer</li>
+         <li>document.title</li>
+         <li>document.URL</li>
+     </ul>
+     <script>
+       let oProp2 = document.getElementById('prop').getElementsByTagName('li');
+      console.log(oProp2)
+     </script>
+
+     <h2>方法：</h2>
+     <ul>
+         <li>document.close()</li>
+         <li>document.getElementById()</li>
+         <li>document.getElementsByName()</li>
+         <li>document.getElementsByTagName()</li>
+         <li>document.write()</li>
+         <li>document.writeln()</li>
+     </ul>
+
+     <textarea id="output" name="output" id="" cols="60" rows="10"></textarea>
+  </body>
+  
+
+  <script>
+      var oProp = document.getElementById('prop');
+      var oCollect = document.getElementById('collection');
+      var txt;
+      var txtarea = document.getElementById('output');
+
+      function demo(para) {
+        var oLi = para.getElementsByTagName('li');
+
+      for(var i=0;i<oLi.length;i++){
+          oLi[i].onclick = function(){
+              txt = this.innerHTML
+              console.log(txt)
+              txtarea.value = "属性:"+txt+"\n\n"
+              txtarea.value += "结果:\n"+ eval(txt);
+
+
+          }
+      }
+
+    }
+    demo(oProp);
+    demo(oCollect);
+
+  </script>
+</body>
+</html>

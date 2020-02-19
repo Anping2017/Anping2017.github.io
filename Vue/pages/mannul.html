@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mannul</title>
     <style>
-        ul>ul {
-            display: none;
-        }
-
-        ul:hover>ul {
-            display: block;
-        }
 
 
 
@@ -157,7 +150,14 @@
         <li>内置组件</li>
     </ul>
     <script>
-
+        let oLi = document.getElementsByTagName('li');
+        
+        for(let i=0; i<oLi.length; i++){
+            oLi[i].onclick = function(){ 
+            
+            location.assign("https://cn.vuejs.org/v2/api/#"+oLi[i].innerHTML);
+        }
+        }
     </script>
 
 </body>
