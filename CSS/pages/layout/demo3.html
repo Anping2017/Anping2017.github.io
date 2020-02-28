@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ccc;
+        }
+
+        .wrapper {
+            height: 1200px;
+            background-color: #777;
+        }
+
+        .center {
+            height: 600px;
+            width: 600px;
+            margin: 0 auto;
+            background-color: #6c6;
+            padding-top: 100px;
+        }
+
+        .center span {
+            position: absolute;
+            top: 10px;
+            left: 310px;
+        }
+
+        .center>div {
+            float: left;
+            width: 200px;
+            height: 400px;
+
+        }
+
+        .left {
+            background-color: red;
+            text-align: center;
+        }
+
+
+        .right {
+            background-color: yellow;
+            text-align: center;
+        }
+        .middle {
+            background-color:blue;
+            text-align:center;
+        }
+        .note {
+            position: absolute;
+            top:10px;
+            left:10px;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="center">
+
+            <span>height:600px</span>
+            <div class="left">
+                <p>.left</p>
+                <p>float:left</p>
+                <p>width:200px</p>
+                <p>height:400px</p>
+
+
+            </div>
+
+
+            <div class="middle">
+                <p>middle</p>
+                <p>float:left</p>
+                <p>width:200px</p>
+                <p>height:400px</p>
+            </div>
+            <div class="right">
+                <p>.right</p>
+                <p>float:left</p>
+                <p>width:200px</p>
+                <p>height:400px</p>
+            </div>
+        </div>
+    </div>
+    <div class="note">
+        float宽度可以自适应
+     
+    </div>
+</body>
+
+</html>
