@@ -165,11 +165,17 @@
             else {
                 let now = myClock.getNow();
                 let mins = now.getMinutes();
+        
                 if (mins > 30) {
-                    return mins - 30;
+               
+                    return 60 - mins;
+                  
                 }
                 else {
-                    return 30 - mins;
+                    mins = 30 - mins;
+                
+                    return mins;
+                    
                 }
 
             }
