@@ -4,248 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyCheatSheet</title>
-
+    <title>Green Patch绿莹超市杂货清单</title>
     <style>
-        /* reset */
-        * {
-            /* border: 1px solid black; */
-            margin: 0px;
-            padding: 0px;
-        }
-
-
-
-        body {
-            font-size: 20px;
-        }
-
-        /* header start */
-        header {
-            background-color: #1abc9c;
+        .center {
+            width: 30%;
+            margin: 0 auto;
             overflow: hidden;
 
         }
 
+        .center>div {
+            padding: 20px 10px;
+            margin: 6px;
+            cursor: pointer;
+            float: left;
+            border: 3px solid grey;
+            font-size: 20px;
+        }
+
+        .center>div:hover {
+            background-color: green;
+
+        }
+
+        .center>div:hover a {
+            color: white;
+        }
+
         a {
             text-decoration: none;
-        }
-
-        .center ul,
-        .right-nav {
-            list-style: none;
-        }
-
-        header a {
-            text-decoration: none;
             color: #000;
-        }
-
-        header a:hover {
-            color: #fff;
-
-        }
-
-        header ul li {
-            font-size: 20px;
-            font-weight: bold;
-            padding: 15px;
-        }
-
-        /* 3 block float */
-        .left-nav {
-            float: left;
-            padding: 10px;
-        }
-
-        header nav {
-            float: left;
-
-        }
-
-        .right-nav {
-            float: right;
-        }
-
-
-        /* left-nav */
-        .my-header {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        /* center nav */
-        .center ul {
-            float: left;
-            margin-left: 20px;
-        }
-
-
-        .center ul li {
-            float: left;
-        }
-
-
-
-
-
-        /* right-nav */
-        .right-nav {
-            float: right;
-        }
-
-        .right-nav li {
-            float: left;
-        }
-
-
-        /* header end */
-
-
-
-
-
-        /* center */
-        .container {
-            margin: 0 auto;
-            width: 80%;
-            padding: 20px;
-
-
-        }
-
-        .container ul {
-            font-weight: bold;
-        }
-
-        .container ul li {
-            padding: 5px;
-        }
-
-        .container h2 {
-            font-size: 30px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-weight: bold;
-        }
-
-        .container ul ul {
-            margin-left: 25px;
-
-        }
-
-        .study>ul {
-            margin-top: 20px;
-        }
-
-        .col {
-            float: left;
-            margin: 0px 30px;
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- header start -->
-        <header>
-            <!-- left-nav -->
-            <div class="left-nav">
-                <span class="my-header">My Cheat Sheet</span>
-            </div>
 
-            <!-- center nav -->
-            <div class="center">
-                <ul>
-                    <li><a href="./pages/myTool.html">工具</a></li>
-                    <li><a href="pages/manual.html">手册</a></li>
-                    <li><a href="pages/review.html">复习</a></li>
-                </ul>
-            </div>
-
-            <!-- right-nav -->
-            <ul class="right-nav">
-                <li><a
-                        href="https://passport.kaikeba.com/login?scope=&redirect=https%3A%2F%2Flearn.kaikeba.com%2Ftransfer%3Fredirect_uri%3Dhttps%253A%252F%252Flearn.kaikeba.com%252Fhome">开课吧</a>
-                </li>
-                <li><a href="https://anping2017.github.io./">Github pages</a></li>
-                <li><a href="https://github.com/Anping2017/Anping2017.github.io">My Github</a></li>
-            </ul>
-
-        </header>
-
-
-        <div class="container">
-            <div class="study">
-                <h2>我的学习</h2>
-                <ul class="col">
-
-                    <li><a href="HTML/html.html">HTML</a></li>
-                    <ul>
-                        <li><a href="https://getbootstrap.com/" name="BootStrap Officials">BootStrap</a></li>
-                    </ul>
-                    <li><a href="CSS/css.html">CSS</a></li>
-                    <ul>
-                        <li><a href="pages/sass.html">Sass</a></li>
-                    </ul>
-                    <li><a href="JS/js.html">JS</a></li>
-                    <ul>
-                        <li><a href="JS/BOM/BOM.html">BOM</a></li>
-                        <li><a href="JS/DOM/DOM.html">DOM</a></li>
-
-                        <li><a href="https://www.json.org/json-en.html">JSON</a></li>
-                        <li><a href="https://jquery.com/">JQuery</a></li>
-                        <li><a href="https://nodejs.org/zh-cn/">Node JS</a></li>
-                        <li><a href="Vue/vue.html">Vue</a></li>
-                    </ul>
-                    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-                    <ul>
-                        <li><a href="https://babeljs.io/">Babel</a></li>
-                    </ul>
-
-
-                </ul>
-
-                <ul class="col">
-                    <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a></li>
-                    <li><a href="https://git-scm.com/docs">GIT</a></li>
-                    <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/">Linux</a></li>
-                    <li><a href="https://webpack.js.org/">Webpack</a></li>
-                    <li><a
-                            href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">正则表达式</a>
-                    </li>
-
-                </ul>
-
-                <ul class="col">
-                    <li>本地存储</li>
-                    <li>前后端交互</li>
-                    <li>移动端开发</li>
-                    <li>浏览器基础</li>
-                    <li>HTTP</li>
-                    <li>安全</li>
-                </ul>
-                <ul class="col">
-                    <li>命名和书写规范</li>
-                    <li>SEO</li>
-                    <li>响应式布局</li>
-                    <li>数据结构</li>
-                    <li>算法</li>
-                    <li>性能优化</li>
-
-
-
-                </ul>
-
-                <ul class="col">
-                    <li><a href="PHP/php.html">PHP</a></li>
-                    <li><a href="Python/python.html">PYTHON</a></li>
-                </ul>
-
-
-            </div>
-
-        </div>
-    </div>
 </body>
 
 </html>
+
+<div class="wrapper">
+
+    <div class="center">
+        <h2>Green Patch杂货清单</h2>
+        <div class="ctg1"><a href="pages/lymm.html">粮油米面</a></div>
+        <div class="ctg2"><a href="pages/twjl.html">调味酱料</a></div>
+        <div class="ctg3"><a href="pages/zcsp.html">佐餐食品</a></div>
+    </div>
+    <div class="center">
+        <div class="ctg4"><a href="pages/ylct.html">饮料冲调</a></div>
+        <div class="ctg5"><a href="pages/lsxc.html">零食小吃</a></div>
+        <div class="ctg6"><a href="pages/fbss.html">方便速食</a></div>
+    </div>
+    <div class="center">
+        <div class="ctg7"><a href="pages/sxsd.html">生鲜速冻</a></div>
+        <div class="ctg8"><a href="pages/txzh.html">菌菇干货</a></div>
+        <div class="ctg9"><a href="pages/qtzh.html">其他杂货</a></div>
+    </div>
+</div>
