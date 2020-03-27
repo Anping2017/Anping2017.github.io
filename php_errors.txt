@@ -1,0 +1,103 @@
+[27-Mar-2020 00:14:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:15:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:17:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:17:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:22:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in D:\xampp\htdocs\dashboard\data.php:15
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 15
+[27-Mar-2020 00:25:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in D:\xampp\htdocs\dashboard\data.php:23
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 23
+[27-Mar-2020 00:26:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in D:\xampp\htdocs\dashboard\data.php:23
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 23
+[27-Mar-2020 00:26:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in D:\xampp\htdocs\dashboard\data.php:23
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 23
+[27-Mar-2020 00:26:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in D:\xampp\htdocs\dashboard\data.php:23
+Stack trace:
+#0 D:\xampp\htdocs\dashboard\getAllProduct.php(9): require_once()
+#1 {main}
+  thrown in D:\xampp\htdocs\dashboard\data.php on line 23
+[27-Mar-2020 00:27:17 Europe/Berlin] PHP Warning:  mysqli_select_db() expects exactly 2 parameters, 1 given in D:\xampp\htdocs\dashboard\data.php on line 23
+[27-Mar-2020 00:27:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in D:\xampp\htdocs\dashboard\getAllProduct.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\dashboard\getAllProduct.php on line 15
+[27-Mar-2020 00:27:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in D:\xampp\htdocs\dashboard\getAllProduct.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\dashboard\getAllProduct.php on line 15
+[27-Mar-2020 00:28:30 Europe/Berlin] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in D:\xampp\htdocs\dashboard\getAllProduct.php on line 15
+[27-Mar-2020 00:28:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_fetch_assoc() in D:\xampp\htdocs\dashboard\getAllProduct.php:17
+Stack trace:
+#0 {main}
+  thrown in D:\xampp\htdocs\dashboard\getAllProduct.php on line 17
+[27-Mar-2020 00:29:27 Europe/Berlin] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in D:\xampp\htdocs\dashboard\getAllProduct.php on line 15
+[27-Mar-2020 00:29:27 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in D:\xampp\htdocs\dashboard\getAllProduct.php on line 17
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21
+[27-Mar-2020 02:05:58 Europe/Berlin] PHP Warning:  A non-numeric value encountered in D:\xampp\htdocs\dashboard\getAllProduct.php on line 21

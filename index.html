@@ -5,65 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Patch绿莹超市杂货清单</title>
+    <script src="http://localhost/dashboard/JS/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <style>
-        .center {
-            width: 30%;
-            margin: 0 auto;
-            overflow: hidden;
-            min-width:500px;
+        .wrapper {
+    box-sizing: border-box;
+    background-color: #e9d8be;
+}
 
-            
+.center {
+    max-width:500px;
+    min-width:200px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.clearfix:before,.clearfix:after {
+        content:"";
+        display:table;  
+       }
+   .clearfix:after {
+       clear:both;
+   }
+   .clearfix {
+   *zoom:1;
+   }
+}
+
+.fl {
+    float:left;
+}
+
+.fr {
+    float:right;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+        cursor: pointer;
+
+}
+
+ul,
+li {
+    list-style:none;
+}
+        header {
+            text-align: center;
         }
 
-        .center>div {
-            padding: 20px 0px;
-            text-align:center;
-            margin: 5px;
-            cursor: pointer;
+        .item {
+            width: 33%;
+            padding: 20px;
             float: left;
-            border: 3px solid grey;
-            font-size: 20px;
-            width:100px;
+            max-width: 120px;
+        }
+        .product-list {
+            width: 100%;
+            text-align:center;
+        }
+        td {
+            width:25%;
+            background-color: #66C4CC;
+
+        }
+        .less,
+        .more{
+            display:inline-block;
+            padding:2px 8px;
+            border:1px solid grey;
+            cursor: pointer;
+        }
+        .qty {
+            margin:5px;
+            font-size:18px;
         }
 
-        .center>div:hover {
-            background-color: green;
-
+        .product-list tr td input {
+            width:20px;
         }
-
-        .center>div:hover a {
-            color: white;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
+        
+        
     </style>
 </head>
 
 <body>
+    <div class="wrapper">
 
+        <div class="center clearfix">
+            <header>
+                <h2>Green Patch一键接龙</h2>
+            </header>
+            <hr>
+            <!-- <p><a href="pages/cart/cart.html" style="float:right">🛒我的购物车</a></p> -->
+            <h2>商品列表</h2>
+            <div id="showing">
+
+            </div>
+            <section class="clearfix">
+                <table class="product-list">
+                   
+                    <!-- <tr>
+                        <td>name</td>
+                        <td>price</td>
+                        <td>unit</td>
+                        <td>
+                            <span class="less">-</span><span class="qty">0</span><span class="more">+</span>
+
+                        </td>
+                    </tr> -->
+                </table>
+                <!-- <div class="item">
+                    大白菜1kg
+                    <p><span class="price">$5</span></p>
+                    <p><span class="less">-</span>
+                        <span class="qtt">0</span>
+                        <span class="more">+</span></p>
+                </div>
+                <div class="item">
+                    大白菜1kg
+                    <p><span class="price">$5</span></p>
+                    <p><span class="less">-</span>
+                        <span class="qtt">0</span>
+                        <span class="more">+</span></p>
+                </div>
+                <div class="item">
+                    大白菜1kg
+                    <p><span class="price">$5</span></p>
+                    <p><span class="less">-</span>
+                        <span class="qtt">0</span>
+                        <span class="more">+</span></p>
+                </div> -->
+            </section>
+            <hr>
+
+
+            <!-- <section>
+                <h2>用户信息</h2>
+
+                <div class="customer">
+                    <p>姓名：<input type="text"></p>
+                    <p>电话：<input type="text"></p>
+                    <p>送货地址：</p>
+                        街道名：<input type="text">
+                        所属区域：<input type="text">
+                    <p>支付方式：
+                        <input type="radio" name="payment" id="online">银行转账
+                        <input type="radio" name="payment" id="cash">现金
+                        <p>备注:</p>
+                        <p><textarea name="" id="" cols="60" rows="5"></textarea></p>
+                </div>
+            </section> -->
+        </div>
+     
+    </div>
+    <script>
+
+    </script>
 </body>
 
 </html>
-
-<div class="wrapper">
-
-    <div class="center">
-        <h2>Green Patch杂货清单</h2>
-        <div class="ctg1"><a href="pages/lymm.html">粮油米面</a></div>
-        <div class="ctg2"><a href="pages/twjl.html">调味酱料</a></div>
-        <div class="ctg3"><a href="pages/zcsp.html">佐餐食品</a></div>
-    </div>
-    <div class="center">
-        <div class="ctg4"><a href="pages/ylct.html">饮料冲调</a></div>
-        <div class="ctg5"><a href="pages/lsxc.html">零食小吃</a></div>
-        <div class="ctg6"><a href="pages/fbss.html">方便速食</a></div>
-    </div>
-    <div class="center">
-        <div class="ctg7"><a href="pages/sxsd.html">生鲜速冻</a></div>
-        <div class="ctg8"><a href="pages/txzh.html">菌菇干货</a></div>
-        <div class="ctg9"><a href="pages/qtzh.html">其他杂货</a></div>
-    </div>
-</div>
