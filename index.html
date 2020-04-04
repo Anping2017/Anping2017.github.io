@@ -4,169 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Patch绿莹超市杂货清单</title>
-    <script src="http://localhost/dashboard/JS/script.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <title>MyCheatSheet</title>
+
     <style>
-        .wrapper {
-    box-sizing: border-box;
-    background-color: #e9d8be;
-}
+        /* reset */
+        * {
+            /* border: 1px solid black; */
+            margin: 0px;
+            padding: 0px;
+        }
 
-.center {
-    max-width:500px;
-    min-width:200px;
-    margin: 0 auto;
-    background-color: #eee;
-}
 
-.clearfix:before,.clearfix:after {
-        content:"";
-        display:table;  
-       }
-   .clearfix:after {
-       clear:both;
-   }
-   .clearfix {
-   *zoom:1;
-   }
-}
 
-.fl {
-    float:left;
-}
+        body {
+            font-size: 20px;
+        }
 
-.fr {
-    float:right;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-        cursor: pointer;
-
-}
-
-ul,
-li {
-    list-style:none;
-}
+        /* header start */
         header {
-            text-align: center;
+            background-color: #1abc9c;
+            overflow: hidden;
+
         }
 
-        .item {
-            width: 33%;
-            padding: 20px;
+        a {
+            text-decoration: none;
+        }
+
+        .center ul,
+        .right-nav {
+            list-style: none;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        header a:hover {
+            color: #fff;
+
+        }
+
+        header ul li {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* 3 block float */
+        .left-nav {
             float: left;
-            max-width: 120px;
-        }
-        .product-list {
-            width: 100%;
-            text-align:center;
-        }
-        td {
-            width:25%;
-            background-color: #66C4CC;
-
-        }
-        .less,
-        .more{
-            display:inline-block;
-            padding:2px 8px;
-            border:1px solid grey;
-            cursor: pointer;
-        }
-        .qty {
-            margin:5px;
-            font-size:18px;
+            padding: 10px;
         }
 
-        .product-list tr td input {
-            width:20px;
+        header nav {
+            float: left;
+
         }
-        
-        
+
+        .right-nav {
+            float: right;
+        }
+
+
+        /* left-nav */
+        .my-header {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* center nav */
+        .center ul {
+            float: left;
+            margin-left: 20px;
+        }
+
+
+        .center ul li {
+            float: left;
+        }
+
+
+
+
+
+        /* right-nav */
+        .right-nav {
+            float: right;
+        }
+
+        .right-nav li {
+            float: left;
+        }
+
+
+        /* header end */
+
+
+
+
+
+        /* center */
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            padding: 20px;
+
+
+        }
+
+        .container ul {
+            font-weight: bold;
+        }
+
+        .container ul li {
+            padding: 5px;
+        }
+
+        .container h2 {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .container ul ul {
+            margin-left: 25px;
+
+        }
+
+        .study>ul {
+            margin-top: 20px;
+        }
+
+        .col {
+            float: left;
+            margin: 0px 30px;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- header start -->
+        <header>
+            <!-- left-nav -->
+            <div class="left-nav">
+                <span class="my-header">My Cheat Sheet</span>
+            </div>
 
-        <div class="center clearfix">
-            <header>
-                <h2>Green Patch一键接龙</h2>
-            </header>
-            <hr>
-            <!-- <p><a href="pages/cart/cart.html" style="float:right">🛒我的购物车</a></p> -->
-            <h2>商品列表</h2>
-            <div id="showing">
+            <!-- center nav -->
+            <div class="center">
+                <ul>
+                    <li><a href="./pages/myTool.html">工具</a></li>
+                    <li><a href="pages/manual.html">手册</a></li>
+                    <li><a href="pages/review.html">复习</a></li>
+                </ul>
+            </div>
+
+            <!-- right-nav -->
+            <ul class="right-nav">
+                <li><a
+                        href="https://passport.kaikeba.com/login?scope=&redirect=https%3A%2F%2Flearn.kaikeba.com%2Ftransfer%3Fredirect_uri%3Dhttps%253A%252F%252Flearn.kaikeba.com%252Fhome">开课吧</a>
+                </li>
+                <li><a href="https://anping2017.github.io./">Github pages</a></li>
+                <li><a href="https://github.com/Anping2017/Anping2017.github.io">My Github</a></li>
+            </ul>
+
+        </header>
+
+
+        <div class="container">
+            <div class="study">
+                <h2>我的学习</h2>
+                <ul class="col">
+
+                    <li><a href="HTML/html.html">HTML</a></li>
+                    <ul>
+                        <li><a href="https://getbootstrap.com/" name="BootStrap Officials">BootStrap</a></li>
+                    </ul>
+                    <li><a href="CSS/css.html">CSS</a></li>
+                    <ul>
+                        <li><a href="pages/sass.html">Sass</a></li>
+                    </ul>
+                    <li><a href="JS/js.html">JS</a></li>
+                    <ul>
+                        <li><a href="JS/BOM/BOM.html">BOM</a></li>
+                        <li><a href="JS/DOM/DOM.html">DOM</a></li>
+
+                        <li><a href="https://www.json.org/json-en.html">JSON</a></li>
+                        <li><a href="https://jquery.com/">JQuery</a></li>
+                        <li><a href="https://nodejs.org/zh-cn/">Node JS</a></li>
+                        <li><a href="Vue/vue.html">Vue</a></li>
+                    </ul>
+                    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+                    <ul>
+                        <li><a href="https://babeljs.io/">Babel</a></li>
+                    </ul>
+
+
+                </ul>
+
+                <ul class="col">
+                    <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a></li>
+                    <li><a href="https://git-scm.com/docs">GIT</a></li>
+                    <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/">Linux</a></li>
+                    <li><a href="https://webpack.js.org/">Webpack</a></li>
+                    <li><a
+                            href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">正则表达式</a>
+                    </li>
+
+                </ul>
+
+                <ul class="col">
+                    <li>本地存储</li>
+                    <li>前后端交互</li>
+                    <li>移动端开发</li>
+                    <li>浏览器基础</li>
+                    <li>HTTP</li>
+                    <li>安全</li>
+                </ul>
+                <ul class="col">
+                    <li>命名和书写规范</li>
+                    <li>SEO</li>
+                    <li>响应式布局</li>
+                    <li>数据结构</li>
+                    <li>算法</li>
+                    <li>性能优化</li>
+
+
+
+                </ul>
+
+                <ul class="col">
+                    <li><a href="PHP/php.html">PHP</a></li>
+                    <li><a href="Python/python.html">PYTHON</a></li>
+                </ul>
+
 
             </div>
-            <section class="clearfix">
-                <table class="product-list">
-                   
-                    <!-- <tr>
-                        <td>name</td>
-                        <td>price</td>
-                        <td>unit</td>
-                        <td>
-                            <span class="less">-</span><span class="qty">0</span><span class="more">+</span>
 
-                        </td>
-                    </tr> -->
-                </table>
-                <!-- <div class="item">
-                    大白菜1kg
-                    <p><span class="price">$5</span></p>
-                    <p><span class="less">-</span>
-                        <span class="qtt">0</span>
-                        <span class="more">+</span></p>
-                </div>
-                <div class="item">
-                    大白菜1kg
-                    <p><span class="price">$5</span></p>
-                    <p><span class="less">-</span>
-                        <span class="qtt">0</span>
-                        <span class="more">+</span></p>
-                </div>
-                <div class="item">
-                    大白菜1kg
-                    <p><span class="price">$5</span></p>
-                    <p><span class="less">-</span>
-                        <span class="qtt">0</span>
-                        <span class="more">+</span></p>
-                </div> -->
-            </section>
-            <hr>
-
-
-            <!-- <section>
-                <h2>用户信息</h2>
-
-                <div class="customer">
-                    <p>姓名：<input type="text"></p>
-                    <p>电话：<input type="text"></p>
-                    <p>送货地址：</p>
-                        街道名：<input type="text">
-                        所属区域：<input type="text">
-                    <p>支付方式：
-                        <input type="radio" name="payment" id="online">银行转账
-                        <input type="radio" name="payment" id="cash">现金
-                        <p>备注:</p>
-                        <p><textarea name="" id="" cols="60" rows="5"></textarea></p>
-                </div>
-            </section> -->
         </div>
-     
     </div>
-    <script>
-
-    </script>
 </body>
 
 </html>

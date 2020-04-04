@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../main.css">
+
+  <title>BOM</title>
+  <style>
+    li:hover,
+    p:hover,
+    a:hover {
+      color: red;
+      cursor: pointer;
+    }
+
+    a {
+  
+      text-decoration: none;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <h1>BOM</h1>
+  <a href="../../index.html">返回</a>
+  <p><a href="https://www.w3school.com.cn/jsref/index.asp">手册参考</a>
+  </p><h2>window对象的四大对象</h2>
+
+  <p><a href="https://www.w3school.com.cn/jsref/dom_obj_window.asp">{window}</a></p>
+  <ul>
+    <li><a href="obj/location.html">{location}</a></li>
+    <li><a href="obj/navigator.html">{navigator}</a></li>
+    <li><a href="obj/screen.html">{screen}</a></li>
+    <li><a href="obj/history.html">{history}</a></li>
+  </ul>
+  
+  <input type="text" id="user" name="user_input">
+  <button>submit</button>
+
+  <p id="demo">this的值默认就是window（点击显示）</p>
+
+  <script>
+    var w = this;
+    var oDemo = document.getElementById('demo');
+    oDemo.onmousedown = function() {
+      this.innerHTML = 'this的值： ' + w + '<br>' + 'window的值: ' + window + '<br>';
+    }
+    // oDemo.onmouseout = function() {
+    //   this.innerHTML = "this的值默认就是window（点击显示）"
+    // }
+    var a = document.getElementsByTagName('li');
+    for (c in a) {
+      console.log(a[c].innerHTML)
+    }
+    
+    
+
+    
+    var btn = document.getElementsByTagName('button')[0];
+   
+    btn.onclick = function (){
+          var oUser = document.getElementById('user');
+      var userInput = oUser.value;
+      
+      if(userInput=='history'){
+        oDemo.innerHTML = "<h2>History 对象属性</h2>\
+<ul><li>length</li></ul>\
+<h2>History对象方法</h2>\
+<ul><li>back()</li><li>forward()</li><li>go()</li></ul><br>"
+
+      }
+     else{ 
+      oDemo.innerHTML= eval(userInput);
+    }
+      }
+  </script>
+</body>
+
+</html>

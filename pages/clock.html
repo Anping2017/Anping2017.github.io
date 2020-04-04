@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="../main.css">
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            background-color: white;
+        }
+
+        .center {
+            height: 600px;
+            background-color:lightsalmon;
+            width: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 35px;
+
+        }
+
+        .clock {
+            height: 80%;
+            width: 70%;
+            margin: 40px auto;
+
+        }
+
+        .display {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 50px;
+            line-height: 50px;
+            width: 200px;
+            background-color: black;
+            color:aquamarine
+            
+        }
+        .left {
+            padding: 10px;
+            border:1px solid black;
+            width: 270px;
+            height: 400px;
+            text-align: center;
+            border-radius: 35px;
+            background-color:white;
+
+        }
+
+        .time {
+            border: 1px solid blue;
+            padding: 20px;
+            float: right;
+            font-size: 40px;
+            line-height: 40px;
+            border-radius: 35px;
+            text-align:center;
+            background-color: white;
+
+        }
+        ul li {
+            margin: 20px 0;
+        }
+    
+
+        #cdtime {
+            width: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            width:60px;
+            height:40px;
+            background-color:black;
+            color:white;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="center">
+            <div class="clock">
+                <div class="time">
+                    <img src="../img/246x0w.png" alt="">
+                    <p id="time">00:00 AM</p>
+                </div>
+                <div class="left">
+                <h1>我的计时器</h1>
+                <div class="display">
+                    <span id="display">00:00</span>
+                </div>
+
+                <ul>
+                    <li>
+                        <input type="radio" name="method" checked value="countdown" id="countdown"><label
+                            for="countdown">倒计时时间:</label> <input id="cdtime" type="text" value="30">分
+                    </li>
+                    <li>
+                        <input type="radio" name="method" value="whole" id="whole"><label for="whole">整点时间</label>
+                    </li>
+                </ul>
+
+                <button onclick="myClock.myClockStart()">开始</button>
+                <button onclick="myClock.myClockStop()">结束</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+
+        var myClock = {}
+        myClock.nowClock = document.getElementById('time');
+
+        myClock.getNow = function () {
+            let now = new Date();
+            return now;
+        }
+        myClock.getLocalTime = function () {
+            let now = myClock.getNow().toLocaleTimeString()
+
+            myClock.nowClock.innerHTML = now;
+        }
+
+        myClock.startNowClock = function () {
+            myClock.getLocalTime();
+
+            return self.setInterval("myClock.getLocalTime()", 1000);
+        }
+
+        myClock.startNowClock();
+
+
+
+
+        myClock.choosedMethod = function () {
+            let selectedMethod = document.getElementsByName('method');
+
+            for (let i = 0; i < selectedMethod.length; i++) {
+                if (selectedMethod[i].checked) {
+                    return (selectedMethod[i].value)
+                }
+            }
+        }
+
+        myClock.calTime = function () {
+            let method = myClock.choosedMethod();
+            if (method == "countdown") {
+                let cdTime = document.getElementById('cdtime').value;
+                return cdTime;
+            }
+            else {
+                let now = myClock.getNow();
+                let mins = now.getMinutes();
+        
+                if (mins > 30) {
+               
+                    return 60 - mins;
+                  
+                }
+                else {
+                    mins = 30 - mins;
+                
+                    return mins;
+                    
+                }
+
+            }
+        }
+
+        myClock.getFinTime = function () {
+
+            let cdMins = myClock.calTime()
+            let time = new Date();
+            let finTime = new Date(time.getTime() + cdMins * 60 * 1000);
+
+            return finTime;
+
+
+
+        }
+        let finTime = myClock.getFinTime();
+        let myDisplay = document.getElementById('display');
+        myClock.getCalTime = function () {
+
+
+            let now = myClock.getNow();
+            let calTime = finTime - now;
+            mins = Math.floor(calTime / 1000 / 60 % 60);
+            secs = Math.ceil(calTime / 1000 % 60);
+            if (mins >= 0 && secs >= 0) {
+                if(mins<10){
+                    mins = "0"+ mins;
+                }
+                if(secs<10) {
+                    secs = "0" + secs;
+                }
+                myDisplay.innerHTML = mins + ':' + secs;
+            }
+            else {
+                myClock.myClockStop();
+                location.assign("https://www.youtube.com/watch?v=XF_LFHRjfjM")
+            }
+
+
+        }
+        let setInt = 1;
+        myClock.myClockStart = function () {
+
+            if (setInt == 1) {
+                finTime = myClock.getFinTime();
+
+                setInt = self.setInterval("myClock.getCalTime()", 1000);
+            }
+       
+        }
+        myClock.myClockStop = function () {
+            clearInterval(setInt)
+            myDisplay.innerHTML = '00:00';
+            setInt = 1;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

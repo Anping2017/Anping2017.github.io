@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link href="../../src/prism.css" rel="stylesheet" />
+
+    <style>
+        /* css */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 800px;
+            margin: 0 auto;
+            height: 20px;
+
+
+        }
+
+        nav {
+            background-color: #EEEEEE;
+            height: 40px;
+            width: 450px;
+            margin: 0px auto;
+
+        }
+
+        /*横向一级菜单样式设置*/
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            /*将a行内元素转变成块级元素*/
+            width: 90px;
+            height: 40px;
+        }
+
+        a:hover {
+            background-color: #666666;
+            color: #FFFFFF;
+        }
+
+
+        /*二级下拉菜单样式设置*/
+        ul li ul li {
+            float: none;
+            background-color: #EEEEEE;
+        }
+
+        ul li ul {
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            display: none;
+            /*默认状态下或鼠标离开时隐藏*/
+            width: 90px;
+        }
+
+
+        /*为了兼容IE7写的CSS样式，但是必须写在a:hover前面*/
+        ul li ul li a:link,
+        ul li ul li a:visited {
+            background-color: #EEEEEE;
+        }
+
+        ul li ul li a:hover {
+            background-color: #009933;
+        }
+
+
+        /*鼠标滑过一级菜单的元素时显示下拉菜单*/
+        ul li:hover ul {
+            display: block;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        p {
+            margin-top:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../src/prism.js"></script>
+    <div class="wrapper">
+        <h1>案例1</h1>
+        <nav class="clearfix">
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">课程大厅</a>
+                    <ul>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">学习中心</a>
+                    <ul>
+                        <li><a href="#">视频学习</a></li>
+                        <li><a href="#">案例学习</a></li>
+                        <li><a href="#">交流平台</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">经典案例</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper clearfix">
+        <p>实现：</p>
+        
+        <ol>
+            <li>nav>ul>li>ul>li>a</li>
+            <li></li>
+        </ol>
+    
+        <pre><code class="language-html">&lt;!-- html --&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;网站首页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;课程大厅&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ajax&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;学习中心&lt;/a&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;视频学习&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;案例学习&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;交流平台&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;经典案例&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+
+        <pre><code class="lang-css">/* css */
+*{
+   margin:0;
+   padding:0;
+}
+nav{
+   background-color:#EEEEEE;
+   height:40px;
+   width:450px;
+   margin:0 auto;
+}
+
+/*横向一级菜单样式设置*/
+ul{
+   list-style:none;
+}
+
+ul li{
+   float:left;
+   line-height:40px;
+   text-align:center;
+   position:relative;
+}
+
+a{
+    text-decoration:none;
+	color:#000000;
+	display:block;/*将a行内元素转变成块级元素*/
+	width:90px;
+	height:40px;
+}
+
+a:hover{
+    background-color:#666666;
+	color:#FFFFFF;
+}
+
+
+/*二级下拉菜单样式设置*/
+ul li ul li{
+    float:none;
+	background-color:#EEEEEE;
+}
+
+ul li ul{
+    position:absolute;
+	top:40px;
+	left:0px;
+	display:none;/*默认状态下或鼠标离开时隐藏*/
+	width:90px;
+}
+
+
+/*为了兼容IE7写的CSS样式，但是必须写在a:hover前面*/
+ul li ul li a:link,
+ul li ul li a:visited{
+    background-color:#EEEEEE;
+}
+
+ul li ul li a:hover{
+    background-color:#009933;
+}
+
+
+/*鼠标滑过一级菜单的元素时显示下拉菜单*/
+ul li:hover ul{
+    display:block;
+}
+</code>
+</pre>
+    </div>
+</body>
+
+</html>
