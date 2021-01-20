@@ -1,253 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyCheatSheet</title>
-
+    <title>Home</title>
     <style>
-        /* reset  */
         * {
-            /* border: 1px solid black; */
-            margin: 0px;
-            padding: 0px;
+            margin:0;
+            padding:0;
         }
-
-
-
-        body {
-            font-size: 20px;
-        }
-
-        /* header start */
-        header {
-            background-color: #1abc9c;
-            overflow: hidden;
-
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .center ul,
-        .right-nav {
-            list-style: none;
-        }
-
-        header a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        header a:hover {
-            color: #fff;
-
-        }
-
-        header ul li {
-            font-size: 20px;
-            font-weight: bold;
-            padding: 15px;
-        }
-
-        /* 3 block float */
-        .left-nav {
-            float: left;
-            padding: 10px;
-        }
-
-        header nav {
-            float: left;
-
-        }
-
-        .right-nav {
-            float: right;
-        }
-
-
-        /* left-nav */
-        .my-header {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        /* center nav */
-        .center ul {
-            float: left;
-            margin-left: 20px;
-        }
-
-
-        .center ul li {
-            float: left;
-        }
-
-
-
-
-
-        /* right-nav */
-        .right-nav {
-            float: right;
-        }
-
-        .right-nav li {
-            float: left;
-        }
-
-
-        /* header end */
-
-
-
-
-
-        /* center */
         .container {
-            margin: 0 auto;
-            width: 80%;
-            padding: 20px;
-
+            width:50%;
+            height:200px;
+            background-color: #999;
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            overflow: hidden;
+        }
+        
+        .container div{
+            width: 50%;
+            height:200px;
+            float:left;
+            text-align: center;
+            font-size:5em;
+            line-height:200px;
+            
 
         }
 
-        .container ul {
-            font-weight: bold;
+        .container a {
+            text-decoration: none;
+            color:white;
+            font-family:Comic Sans MS, Comic Sans, cursive;
         }
 
-        .container ul li {
-            padding: 5px;
+        .office {
+            background-color:black;
+            
+        }
+        .study {
+            background-color:GREEN;
+      
         }
 
-        .container h2 {
-            font-size: 30px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-weight: bold;
-        }
 
-        .container ul ul {
-            margin-left: 25px;
 
-        }
-
-        .study>ul {
-            margin-top: 20px;
-        }
-
-        .col {
-            float: left;
-            margin: 0px 30px;
-        }
     </style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- header start -->
-        <header>
-            <!-- left-nav -->
-            <div class="left-nav">
-                <span class="my-header">My Cheat Sheet</span>
-            </div>
-
-            <!-- center nav -->
-            <div class="center">
-                <ul>
-                    <li><a href="./pages/myTool.html">工具</a></li>
-                    <li><a href="pages/manual.html">手册</a></li>
-                    <li><a href="pages/review.html">复习</a></li>
-                    <li><a href="jump.html">绿盈超市</a></li>
-                </ul>
-            </div>
-
-            <!-- right-nav -->
-            <ul class="right-nav">
-                <li><a
-                        href="https://passport.kaikeba.com/login?scope=&redirect=https%3A%2F%2Flearn.kaikeba.com%2Ftransfer%3Fredirect_uri%3Dhttps%253A%252F%252Flearn.kaikeba.com%252Fhome">开课吧</a>
-                </li>
-                <li><a href="https://anping2017.github.io./">Github pages</a></li>
-                <li><a href="https://github.com/Anping2017/Anping2017.github.io">My Github</a></li>
-            </ul>
-
-        </header>
-
-
-        <div class="container">
-            <div class="study">
-                <h2>我的学习</h2>
-                <ul class="col">
-
-                    <li><a href="HTML/html.html">HTML</a></li>
-                    <ul>
-                        <li><a href="Bootstrap/bootstrap.html">BootStrap</a></li>
-                    </ul>
-                    <li><a href="css/css.html">CSS</a></li>
-                    <ul>
-                        <li><a href="Less/less.html">Less</a></li>
-                        <li><a href="Sass/sass.html">Sass</a></li>
-                    </ul>
-                    <li><a href="JS/js.html">JS</a></li>
-                    <ul>
-                        <li><a href="JS/BOM/BOM.html">BOM</a></li>
-                        <li><a href="JS/DOM/DOM.html">DOM</a></li>
-                        <li><a href="https://www.json.org/json-en.html">JSON</a></li>
-                        <li><a href="https://jquery.com/">JQuery</a></li>
-                        <li><a href="nodejs/nodejs.html">Node JS</a></li>
-                        <li><a href="Vue/vue.html">Vue</a></li>
-                    </ul>
-                    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-                    <ul>
-                        <li><a href="https://babeljs.io/">Babel</a></li>
-                    </ul>
-
-
-                </ul>
-
-                <ul class="col">
-                    <li><a href="Markdown/markdown.html">Markdown</a></li>
-                    <li><a href="GIT/git.html">GIT</a></li>
-                    <li><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/">Linux</a></li>
-                    <li><a href="https://webpack.js.org/">Webpack</a></li>
-                    <li><a href="regexp/regexp.html">正则表达式</a>
-                    </li>
-
-                </ul>
-
-                <ul class="col">
-                    <li>本地存储</li>
-                    <li>前后端交互</li>
-                    <li>移动端开发</li>
-                    <li><a href="browser/browser.html">浏览器基础</a></li>
-                    <li>HTTP</li>
-                    <li>安全</li>
-                </ul>
-                <ul class="col">
-                    <li><a href="namedoc/namedoc.html">命名和书写规范</a></li>
-                    <li>SEO</li>
-                    <li><a href="respon/respon.html">响应式布局</a></li>
-                    <li><a href="sjjg/sjjg.html">数据结构</a></li>
-                    <li><a href="suanfa/suanfa.html">算法</a></li>
-                    <li>性能优化</li>
-                    <li><a href="dev/dev.html">敏捷开发</a></li>
-
-
-
-                </ul>
-
-                <ul class="col">
-                    <li><a href="PHP/php.html">PHP</a></li>
-                    <li><a href="Python/python.html">PYTHON</a></li>
-                    <li><a href="SQL/sql.html">SQL</a></li>
-                </ul>
-
-
-            </div>
-
+    <div class="container">
+        <div class="office">
+            <a href="cnell/cnell.html">CNELL</a>    
         </div>
+        <div class="study">
+            <a href="main.html">MY</a></div>
     </div>
 </body>
-
 </html>
