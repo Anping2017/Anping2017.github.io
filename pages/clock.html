@@ -10,16 +10,15 @@
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-            background-color: white;
+            background: black url("../img/background-digital.PNG") repeat 0 0;
         }
 
         .center {
-            height: 600px;
-            background-color:lightsalmon;
-            width: 50%;
+            background-color:darkslategray;
+            min-width: 50%;
             margin: 0 auto;
             overflow: hidden;
-            border-radius: 35px;
+            min-height: 600px;
 
         }
 
@@ -44,24 +43,23 @@
         }
         .left {
             padding: 10px;
-            border:1px solid black;
+            border:5px solid grey;
             width: 270px;
             height: 400px;
             text-align: center;
-            border-radius: 35px;
             background-color:white;
 
         }
 
         .time {
-            border: 1px solid blue;
+            border: 5px solid grey;
             padding: 20px;
             float: right;
             font-size: 40px;
             line-height: 40px;
-            border-radius: 35px;
             text-align:center;
             background-color: white;
+           
 
         }
         ul li {
@@ -95,7 +93,9 @@
         <div class="center">
             <div class="clock">
                 <div class="time">
-                    <img src="../img/246x0w.png" alt="">
+                    <a href="https://anping2017.github.io." target="_blank">
+                        <img src="../img/246x0w.png" alt="" >
+                    </a>
                     <p id="time">00:00 AM</p>
                 </div>
                 <div class="left">
@@ -119,6 +119,11 @@
             </div>
         </div>
         </div>
+        <audio id="startSound" src="sound/clock-start-robot.wav" controls="controls" style="visibility: hidden;">
+        </audio>
+        <audio id="stopSound" src="sound/clock-stop-coin.wav" controls="controls" style="visibility: hidden;">
+        </audio>
+    
     </div>
     <script>
 
@@ -212,7 +217,7 @@
             }
             else {
                 myClock.myClockStop();
-                location.assign("https://www.youtube.com/watch?v=hoXiIyTvjTI&list=RDMM&start_radio=1")
+                stopSound()
             }
 
 
@@ -224,6 +229,8 @@
                 finTime = myClock.getFinTime();
 
                 setInt = self.setInterval("myClock.getCalTime()", 1000);
+
+                playSound();
             }
        
         }
@@ -234,6 +241,14 @@
 
         }
 
+        function playSound(){
+            let playButton = document.getElementById("startSound");
+            playButton.play();
+        }
+        function stopSound(){
+            let playButton = document.getElementById("stopSound");
+            playButton.play();
+        }
 
     </script>
 </body>
