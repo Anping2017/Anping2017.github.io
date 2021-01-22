@@ -39,6 +39,12 @@
 |tables|are|cool|
 |------|---:|:----:|
 | col 3 is      | right-aligned | $1623100 |
+
+```
+|title1|title2|title3|
+|---|---:|:---:|
+|cell1|cell2|cell3|
+```
 ***
 
 ### 6 引用
@@ -51,7 +57,10 @@
 ***
 
 ### 8 视频
-## Youtube video link -- as image
+## Youtube video link
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
+```
+[![text](img_url)](video_url)
+```
 ### ==HTML also work well mostly==
