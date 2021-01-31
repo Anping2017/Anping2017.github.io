@@ -1,0 +1,538 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:js</title>
+    <link
+      href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="toc/css/zTreeStyle/zTreeStyle.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      pre {
+        counter-reset: line-numbering;
+        border: solid 1px #d9d9d9;
+        border-radius: 0;
+        background: #fff;
+        padding: 0;
+        line-height: 23px;
+        margin-bottom: 30px;
+        white-space: pre;
+        overflow-x: auto;
+        word-break: inherit;
+        word-wrap: inherit;
+      }
+
+      pre a::before {
+        content: counter(line-numbering);
+        counter-increment: line-numbering;
+        padding-right: 1em; /* space after numbers */
+        width: 25px;
+        text-align: right;
+        opacity: 0.7;
+        display: inline-block;
+        color: #aaa;
+        background: #eee;
+        margin-right: 16px;
+        padding: 2px 10px;
+        font-size: 13px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      pre a:first-of-type::before {
+        padding-top: 10px;
+      }
+
+      pre a:last-of-type::before {
+        padding-bottom: 10px;
+      }
+
+      pre a:only-of-type::before {
+        padding: 10px;
+      }
+
+      .highlight {
+        background-color: #ffffcc;
+      } /* RIGHT */
+    </style>
+  </head>
+  <body>
+    <div>
+      <div style="width: 25%">
+        <ul id="tree" class="ztree" style="width: 100%"></ul>
+      </div>
+      <div id="readme" style="width: 70%; margin-left: 20%">
+        <article class="markdown-body">
+          <h1 id="js-">js复习</h1>
+          <h2 id="js-">JS基础</h2>
+          <h2 id="1-1-js-">1.1 JS嵌入</h2>
+          <ul>
+            <li>
+              内部
+              <ul>
+                <li>head中</li>
+                <li>body中</li>
+              </ul>
+            </li>
+            <li>
+              外部<code
+                >&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</code
+              >
+            </li>
+            <li>noscript</li>
+          </ul>
+          <h2 id="1-2-">1.2 基本规则</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>项目</th>
+                <th>内容</th>
+                <th>备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>大小写</td>
+                <td>区分大小写</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>标识符</td>
+                <td>数字，$ 和_开头</td>
+                <td>变量，函数，属性的名称</td>
+              </tr>
+              <tr>
+                <td>注释</td>
+                <td>// 和/<em> </em>/</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>结尾分号</td>
+                <td>不是必需</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>变量类型</td>
+                <td>动态类型</td>
+                <td>不需要指定变量的数据类型</td>
+              </tr>
+              <tr>
+                <td>转义</td>
+                <td>支持\</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="1-3-">1.3 数据类型</h2>
+          <ul>
+            <li>
+              1.3.1 <strong>原始类型</strong>
+              <ul>
+                <li>
+                  基本类型（包装对象）
+                  <ul>
+                    <li>数字</li>
+                    <li>字符串</li>
+                    <li>布尔</li>
+                  </ul>
+                </li>
+                <li>
+                  特殊
+                  <ul>
+                    <li>null</li>
+                    <li>undefined</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              1.3.2 <strong>引用类型</strong>
+              <ul>
+                <li>基本对象</li>
+                <li>
+                  特殊对象
+                  <ul>
+                    <li>数组</li>
+                    <li>函数</li>
+                  </ul>
+                </li>
+                <li>
+                  内置对象（类）
+                  <ul>
+                    <li>date</li>
+                    <li>正则</li>
+                    <li>error</li>
+                  </ul>
+                </li>
+                <li>
+                  全局对象
+                  <ul>
+                    <li>global（浏览器中为window）</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h2 id="1-4-">1.4 数据类型转换</h2>
+          <h3 id="1-4-1-">1.4.1隐式转换</h3>
+          <p><strong>隐式转换的情景</strong></p>
+          <ul>
+            <li>期望使用布尔值时（if语句，比较大小）</li>
+            <li>期望使用字符串时（+）</li>
+            <li>期望使用数字时（符号-，*，/）</li>
+          </ul>
+          <p><strong>类型转换的值</strong></p>
+          <table>
+            <thead>
+              <tr>
+                <th>原始值</th>
+                <th>转换为字符串</th>
+                <th>转换为数字</th>
+                <th>转换为布尔值</th>
+                <th>转换为对象</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>undefined</td>
+                <td>&quot;undefined&quot;</td>
+                <td><strong>NaN</strong></td>
+                <td><strong>false</strong></td>
+                <td>throws TypeError</td>
+              </tr>
+              <tr>
+                <td>null</td>
+                <td>&quot;null&quot;</td>
+                <td><strong>0</strong></td>
+                <td><strong>false</strong></td>
+                <td>throws TypeError</td>
+              </tr>
+              <tr>
+                <td>true</td>
+                <td>&quot;true&quot;</td>
+                <td>1</td>
+                <td></td>
+                <td>new Boolean(true)</td>
+              </tr>
+              <tr>
+                <td>false</td>
+                <td>&quot;false&quot;</td>
+                <td>0</td>
+                <td></td>
+                <td>new Boolean(false)</td>
+              </tr>
+              <tr>
+                <td>&quot; &quot;</td>
+                <td></td>
+                <td>0</td>
+                <td><strong>false</strong></td>
+                <td>new String(&quot; &quot;)</td>
+              </tr>
+              <tr>
+                <td>&quot;123&quot;</td>
+                <td></td>
+                <td>123</td>
+                <td>true</td>
+                <td>new String(&quot;123&quot;)</td>
+              </tr>
+              <tr>
+                <td>&quot;abc&quot;</td>
+                <td></td>
+                <td><strong>NaN</strong></td>
+                <td>true</td>
+                <td>new String(&quot;abc&quot;)</td>
+              </tr>
+              <tr>
+                <td>0,-0</td>
+                <td>&quot;0&quot;</td>
+                <td></td>
+                <td><strong>false</strong></td>
+                <td>new Number(0/-0)</td>
+              </tr>
+              <tr>
+                <td>NaN</td>
+                <td>&quot;NaN&quot;</td>
+                <td></td>
+                <td><strong>false</strong></td>
+                <td>new Number(NaN)</td>
+              </tr>
+              <tr>
+                <td>Infinity</td>
+                <td>&quot;Infinity&quot;</td>
+                <td></td>
+                <td>true</td>
+                <td>new Number(Infinity)</td>
+              </tr>
+              <tr>
+                <td>-Infinity</td>
+                <td>&quot;-infinity&quot;</td>
+                <td></td>
+                <td>true</td>
+                <td>new Number(-Infinity)</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>&quot;123&quot;</td>
+                <td></td>
+                <td>true</td>
+                <td>new Number(123)</td>
+              </tr>
+              <tr>
+                <td>{}</td>
+                <td>.toString()或value()或异常</td>
+                <td>value()或.toString或异常</td>
+                <td>true</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>[]</td>
+                <td>&quot; &quot;</td>
+                <td>0</td>
+                <td>true</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>[1]单数字数组</td>
+                <td>&quot;1&quot;</td>
+                <td>1</td>
+                <td>true</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>[&#39;a&#39;]</td>
+                <td>join()</td>
+                <td>NaN</td>
+                <td>true</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>function(){}</td>
+                <td></td>
+                <td>NaN</td>
+                <td>true</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 id="1-4-2-">1.4.2 显式（强制）转换</h3>
+          <ul>
+            <li>
+              <p>转换字符串</p>
+              <ul>
+                <li>String()函数</li>
+                <li>.toString方法</li>
+              </ul>
+            </li>
+            <li>
+              <p>转换数字</p>
+              <ul>
+                <li><p>Number()函数</p></li>
+                <li>
+                  <p>parseInt()函数</p>
+                  <blockquote>
+                    <p>整数</p>
+                  </blockquote>
+                </li>
+                <li>
+                  <p>parseFloat()函数</p>
+                  <blockquote>
+                    <p>小数</p>
+                  </blockquote>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>转换布尔值</p>
+              <ul>
+                <li>Boolean()函数</li>
+              </ul>
+            </li>
+          </ul>
+          <h2 id="1-5-">1.5 变量</h2>
+          <h3 id="1-5-1-">1.5.1 变量声明</h3>
+          <p><strong>显式声明</strong></p>
+          <p><code>var a = 1</code></p>
+          <p><strong>隐式声明</strong></p>
+          <pre><code class="lang-js">function demo(){
+    a=1; // 全局a
+}
+demo()
+console.log(a) //1
+</code></pre>
+          <p>1.5.2 作用域</p>
+          <ul>
+            <li>
+              变量作用域
+              <ul>
+                <li>全局作用域</li>
+                <li>函数作用域</li>
+              </ul>
+            </li>
+            <li>作用域链</li>
+          </ul>
+          <p>1.5.3 变量提升</p>
+          <h2 id="1-6-">1.6 运算符</h2>
+          <h3 id="1-6-1-">1.6.1运算符分类</h3>
+          <p>算数运算符</p>
+          <p>比较运算符</p>
+          <p>逻辑运算符</p>
+          <p>位运算符</p>
+          <p>in运算符</p>
+          <p>instanceof运算符</p>
+          <p>其他:三元运算符,typeof运算符,delete运算符,void运算符,逗号运算符</p>
+          <blockquote>
+            <p>延伸阅读:eval(), 当表达式计算时,调用eval函数</p>
+          </blockquote>
+          <h3 id="1-6-2-">1.6.2运算符优先级</h3>
+          <h2 id="1-7-">1.7 语句</h2>
+          <h3 id="-">条件语句</h3>
+          <ul>
+            <li>if</li>
+            <li>if.... else if</li>
+            <li>switch</li>
+          </ul>
+          <h3 id="-">循环语句</h3>
+          <ul>
+            <li>while</li>
+            <li>do while</li>
+            <li>for</li>
+            <li>for in</li>
+          </ul>
+          <h3 id="-">跳转语句</h3>
+          <ul>
+            <li>break</li>
+            <li>continue</li>
+            <li>return</li>
+            <li>标签语句(结合continue)</li>
+            <li>throw</li>
+            <li>try/catch/finally</li>
+          </ul>
+          <h3 id="-">其他</h3>
+          <ul>
+            <li>with</li>
+            <li>debugger</li>
+            <li>&quot;use strict&quot;</li>
+          </ul>
+          <h2 id="1-7-">1.7 对象基础</h2>
+          <h3 id="-">创建</h3>
+          <ul>
+            <li><p>{}</p></li>
+            <li><p>new</p></li>
+            <li><p>Object.create()</p></li>
+          </ul>
+          <h3 id="-">原型</h3>
+          <h3 id="-">继承</h3>
+          <h2 id="1-8-">1.8 数组</h2>
+          <h3 id="-">创建</h3>
+          <ul>
+            <li>[]</li>
+            <li>new Array()</li>
+          </ul>
+          <h3 id="-">长度和稀疏数组</h3>
+          <h3 id="-">查找</h3>
+          <h3 id="-">修改</h3>
+          <h3 id="-">删除</h3>
+          <h3 id="-">遍历</h3>
+          <h3 id="-">多维数组</h3>
+          <h3 id="-">数组方法</h3>
+          <p>基本方法</p>
+          <ul>
+            <li>join()</li>
+            <li>reverse()</li>
+            <li>sort()</li>
+            <li>concat()</li>
+            <li>slice()</li>
+            <li>splice()</li>
+            <li>push()和pop()</li>
+            <li>unshift()和shift()</li>
+            <li>toString和toLocaleString()</li>
+          </ul>
+          <p>ES5方法</p>
+          <ul>
+            <li>forEach()</li>
+            <li>map()</li>
+            <li>filter()</li>
+            <li>every()和some()</li>
+            <li>reduce()和reduceRIght()</li>
+            <li>indexOf()和lastIndexOf()</li>
+          </ul>
+          <blockquote>
+            <p>引申阅读: 代替数组的字符串</p>
+          </blockquote>
+          <h2 id="1-9-">1.9 函数</h2>
+          <h3 id="-">定义</h3>
+          <pre><code class="lang-js">function fn(){
+    //code....
+}
+</code></pre>
+          <h3 id="-">调用</h3>
+          <pre><code class="lang-js">fn();
+fn();
+</code></pre>
+          <h3 id="-call-apply-">间接调用(call和apply)</h3>
+          <h3 id="-">构造函数</h3>
+          <pre><code class="lang-js">//new一个函数来新建一个对象
+new fn
+</code></pre>
+          <h3 id="-">实参和形参</h3>
+          <h3 id="-">命名空间的函数</h3>
+          <p>函数的属性和方法</p>
+          <blockquote>
+            <p>函数式编程和高阶函数</p>
+          </blockquote>
+          <h3 id="1-10-">1.10 类和模块</h3>
+          <p>1.11正则表达式</p>
+          <p>1.12子集</p>
+          <p>1.13服务器端的Javascript</p>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script
+  type="text/javascript"
+  src="toc/js/jquery.ztree.all-3.5.min.js"
+></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<script type="text/javascript">
+  <!--
+  $(document).ready(function () {
+    var css_conf = eval(markdown_panel_style);
+    $("#readme").css(css_conf);
+
+    var conf = eval(jquery_ztree_toc_opts);
+    $("#tree").ztree_toc(conf);
+  });
+  //-->
+</script>
