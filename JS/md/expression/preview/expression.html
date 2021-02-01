@@ -1,0 +1,201 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:expression</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h1 id="-">表达式和语句</h1>
+<p><strong>表达式（Expression)</strong></p>
+<blockquote>
+<p>一个表达式可以产生一个值，有可能是运算、函数调用、有可能是字面量。表达式可以放在任何需要值的地方。</p>
+<pre><code>var a = 1;
+a+b
+a&gt;b
+function abc(){}
+</code></pre></blockquote>
+<p><strong>语句</strong></p>
+<blockquote>
+<p>语句可以理解为一个行为，循环语句和判断语句就是典型的语句。一个程序有很多个语句组成，一般情况下;分割一个一个的语句</p>
+</blockquote>
+<h2 id="js-">JS语句</h2>
+<ul>
+<li>分支结构<ul>
+<li>if</li>
+<li>switch</li>
+<li>三元运算符</li>
+</ul>
+</li>
+<li><p>循环结构</p>
+<ul>
+<li>for</li>
+<li>while</li>
+<li>do while</li>
+</ul>
+</li>
+<li><p>辅助语句</p>
+<ul>
+<li>continue</li>
+<li>break</li>
+</ul>
+</li>
+</ul>
+<h2 id="if-">if语句</h2>
+<pre><code>if (/*condition*/) {
+    //code....
+}
+else if {
+    //code..
+}
+else {
+    //code..
+}
+
+
+</code></pre><h2 id="switch-">switch语句</h2>
+<p>用来处理多个单值的情况</p>
+<pre><code>switch (/*exprestion*/) {
+case /*value*/:
+    //code..
+    break;
+case /*value2*/:
+    //code..
+    break;
+default:
+    //code..
+}
+
+
+//例子
+switch(new.Date().getDay()){
+case 6:
+    text = &quot;Saturday&quot;;
+    break;
+case 7：
+    text = &quot;Sunday&quot;;
+default:
+    text = &quot;Weekday&quot;;
+}
+</code></pre><h2 id="for-">for 语句</h2>
+<pre><code>for (/*before expression*/;/*condition*/;/*after expression*/){
+    //code...
+}
+
+
+//例子
+for (let i =0; i&lt;10; i++) {
+    document.write(i);
+}
+</code></pre><h2 id="while-">while语句</h2>
+<p>先检验再执行</p>
+<pre><code>while (/*condiftion*/) {
+    //code...
+}
+
+//例子
+var i = 1;
+while (i&lt;10){
+    i*=2;
+    document.write(i);
+}
+</code></pre><h2 id="do-while-">do...while语句</h2>
+<p>先执行再检验</p>
+<pre><code>do {
+    //code..
+}while(/*condition*/)
+
+//例子
+var i=1;
+do {
+    i*=2;
+}while(i&lt;10)
+</code></pre><h2 id="-">三元运算符</h2>
+<p>if 语句的简写</p>
+<pre><code>condition？ expression_true:expression_flase;
+
+
+//例子
+var age =100
+var check = (age&gt;60)?&quot;old&quot;:&quot;young&quot;;
+</code></pre>
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
