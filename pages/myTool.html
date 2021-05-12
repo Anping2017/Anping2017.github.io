@@ -28,27 +28,34 @@
         }
 
         .platte {
-            position:absolute;
-            top:20px;
-            right:60px;
+            float:left;
             background-color: #58c9b9;
-            padding:5px 10px;
+            padding: 5px 10px;
             border-radius: 10px;
+            margin:20px;
         }
+
+        .platte .sub-title{
+            font-weight: bold;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <h1 class="tools">My Tools我的工具</h1>
-        <a href="../index.html">返回</a>
+        <p><a href="../index.html">返回</a></p>
+        <div class="platte">
+
         <h2>前端导航</h2>
 
-        <ul>
-            <li><a href="http://www.alloyteam.com/nav/">腾讯前端导航</a></li>
-            <li><a href="https://webjike.com/web.html">小呆导航</a></li>
-            <li><a href="https://lee.js.org/My-Nav/FrontEnd/#/Index">Lee导航</a></li>
-         </ul>
+            <ul>
+                <li><a href="http://www.alloyteam.com/nav/">腾讯前端导航</a></li>
+                <li><a href="https://webjike.com/web.html">小呆导航</a></li>
+                <li><a href="https://lee.js.org/My-Nav/FrontEnd/#/Index">Lee导航</a></li>
+                <li><a href="https://www.kaolamedia.com/">考拉新媒体导航</a></li>
+            </ul>
         <h2>开发工具</h2>
         <ul>
             <li><a href="https://nodejs.org/en/">Node JS</a></li>
@@ -59,53 +66,100 @@
             <li><a href="https://pan.baidu.com/download?from=header">百度网盘</a></li>
             <li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
             <li><a href="https://ubuntu.com/">Ubantu</a></li>
-          
+
         </ul>
 
         <h2>我的工具</h2>
         <ul>
             <li><a href="../pages/clock.html">计时器</a></li>
-            <li><a href="https://typora.io/#windows">Typora</a></li>
-            <li><a href="https://www.draw.io/?lang=zh">在线绘图工具</a></li>
-            <li><a href="https://codepen.io/">Code Pen</a></li>
+            <li><a href="https://typora.io/#windows">Typora (MD工具）</a></li>
+            <li><a href="https://www.draw.io/?lang=zh">draw.io (在线绘图工具)</a></li>
+            <li><a href="https://codepen.io/">Code Pen (在线html)</a></li>
             <li><a href="http://www.bootcss.com/p/font-awesome/">font-awesome</a></li>
             <li><a href="https://getbootstrap.com/docs/4.4/getting-started/introduction">BootStrap CDN</a></li>
-            <li><a href="#">代码高亮</a>:<a href="https://github.com/google/code-prettify">google</a> / <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/xmp">&ltxmp&gt</a> / <a href="https://prismjs.com/index.html">prismjs</a></li>
+            <li><a href="#">代码高亮</a>:<a href="https://github.com/google/code-prettify">google</a> / <a
+                    href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/xmp">&ltxmp&gt</a> / <a
+                    href="https://prismjs.com/index.html">prismjs</a></li>
             <li><a href="https://www.freeformatter.com/html-escape.html">在线转码</a></li>
-            
+
         </ul>
+        </div>
+        <div class="platte">
+            <h2>配色</h2>
+            <ul>
+                <li class="sub-title">智能选色</li>
+                <ul>
+                    <li><a href="http://khroma.co/generator/">khroma</a></li>
+                </ul>
+                <li class="sub-title">推荐色谱</li>
+                <ul>
+                    <li><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL colors</a></li>
+                    <li><a href="https://colordrop.io/">color drop</a></li>
+                </ul>
+                <li class="sub-title">自配工具</li>
+                <ul>
+                    <li><a href="https://color.hailpixel.com/">Colordot</a></li>
+                    <li><a href="http://www.colourco.de/">colourco</a></li>
+                    <li><a href="https://www.palettable.io/00C1B5-6F859C-F7EED2">palettable</a></li>
+                </ul>
+                <li class="sub-title">自动色谱</li>
+                <ul>
+                    <li><a href="https://color.adobe.com/zh/create/color-wheel/">adobe color</a></li>
+                    <li><a href="https://paletton.com/">Paletton</a></li>
+                </ul>
+                <li class="sub-title">风格库</li>
+                <ul>
+                    <li><a href="https://flatuicolors.com/">扁平化色库</a></li>
+                    <li><a href="http://zhongguose.com/">中国色</a></li>
+                    <li><a href="https://webgradients.com/">渐变色</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="platte">
+            <h2>文字</h2>
+            <ul>
+                <li class="sub-title">字体教程</li>
+                <ul>
+                    <li><a href="https://www.runoob.com/css/css-font.html">菜鸟教程-CSS字体</a></li>
+                </ul>
+                <li class="sub-title">网络安全字体</li>
+                <ul>
+                    <li><a href="https://www.w3school.com.cn/cssref/css_websafe_fonts.asp">W3-网络安全字体</a></li>
+                    <li><a
+                            href="https://www.awwwards.com/20-ge-zui-bang-de-google-wang-luo-an-quan-zi-ti.html">20个最棒的网络安全字体</a>
+                    </li>
+                    <li><a href="https://www.hellomagento2.com/web-fonts-chinese/">中文安全字体</a></li>
+                </ul>
+                <li class="sub-title">字体样式表</li>
+                <ul>
+                    <li><a href="https://www.w3.org/Style/Examples/007/fonts.zh_CN.html">W3字体样式表（浏览器对照）</a></li>
+                    <li><a href="https://www.tutorialbrain.com/css_tutorial/css_font_family_list/">CSS字体列表</a></li>
+                </ul>
+                <li class="sub-title">其他教程</li>
+                <ul>
+                    <li><a href="https://segmentfault.com/a/1190000006110417">选择字体注意的问题，大厂参考</a></li>
+                 </ul>
+                <li class="sub-title">字体库</li>
+                <ul>
+                    <li><a href="https://fonts.google.com/">google font字体库</a></li>
+                </ul>
+                <li class="sub-title">自定义图标</li>
+                <ul>
+                    <li><a href="https://fontawesome.com/">font-awesome自定义图标</a></li>
+                </ul>
+            </ul>
+        </div>
 
         <div class="platte">
-        <h2>配色</h2>
-        <ul>
-            <li>智能选色</li>
+            <h2>资源库</h2>
             <ul>
-                <li><a href="http://khroma.co/generator/">khroma</a></li>
+                <li class="sub-title">免费图库</li>
+                <ul>
+                    <li><a href="https://www.runoob.com/css/css-font.html">菜鸟教程-CSS字体</a></li>
+                </ul>
+
             </ul>
-            <li>推荐色谱</li>
-            <ul>
-                <li><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL colors</a></li>
-                <li><a href="https://colordrop.io/">color drop</a></li>
-            </ul>
-            <li>自配工具</li>
-            <ul>
-                <li><a href="https://color.hailpixel.com/">Colordot</a></li>
-                <li><a href="http://www.colourco.de/">colourco</a></li>
-                <li><a href="https://www.palettable.io/00C1B5-6F859C-F7EED2">palettable</a></li>
-            </ul>
-            <li>自动色谱</li>
-            <ul>
-                <li><a href="https://color.adobe.com/zh/create/color-wheel/">adobe color</a></li>
-                <li><a href="https://paletton.com/">Paletton</a></li>
-            </ul>
-            <li>风格库</li>
-            <ul>
-                <li><a href="https://flatuicolors.com/">扁平化色库</a></li>
-                <li><a href="http://zhongguose.com/">中国色</a></li>
-                <li><a href="https://webgradients.com/">渐变色</a></li>
-            </ul>
-        </ul>
-    </div>
+        </div>
     </div>
 
 </body>
