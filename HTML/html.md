@@ -28,23 +28,23 @@
     <body>
     	<header>
 			<h1>title</h1>
-		</header>
-		<nav>
-        	<ul>
+	</header>
+	<nav>
+            <ul>
                 <li>nav list</li>
             </ul>
         </nav>
-		<section>
-			<article>
+	<section>
+	    <article>
             	<h2>header 2</h2>
                 <p>content</p>
             </article>
-		</section>
+	</section>
 		<footer>
 		</footer>	
     
     </body>
-	</html>
+</html>
 ```
 
 ### 1.1 head常用标签
